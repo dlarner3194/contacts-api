@@ -30,7 +30,7 @@ The input format contains the following (JSON):
   "phone": [
     {
       "number": "string",
-      "type": "string"["home" | "work" | "mobile"]
+      "type": "string"
     }
   ],
   "email": "string"
@@ -56,7 +56,7 @@ The return format will contain the following (JSON):
   "phone": [
     {
       "number": "string",
-      "type": "string"["home" | "work" | "mobile"]
+      "type": "string"
     }
   ],
   "email": "string"
