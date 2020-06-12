@@ -17,23 +17,23 @@ The input format contains the following (JSON):
 ```json
 {
   "name": {
-    "first": string,
-    "middle": string,
-    "last": string
+    "first": "string",
+    "middle": "string",
+    "last": "string"
   },
   "address": {
-    "street": string,
-    "city": string,
-    "state": string,
-    "zip": string
+    "street": "string",
+    "city": "string",
+    "state": "string",
+    "zip": "string"
   },
   "phone": [
     {
-      "number": string,
-      "type": string["home" | "work" | "mobile"]
+      "number": "string",
+      "type": "string"["home" | "work" | "mobile"]
     }
   ],
-  "email": string
+  "email": "string"
 }
 ```
 
@@ -41,25 +41,25 @@ The return format will contain the following (JSON):
 
 ```json
 {
-  "id": number,
+  "id": "number",
   "name": {
-    "first": string,
-    "middle": string,
-    "last": string
+    "first": "string",
+    "middle": "string",
+    "last": "string"
   },
   "address": {
-    "street": string,
-    "city": string,
-    "state": string,
-    "zip": string
+    "street": "string",
+    "city": "string",
+    "state": "string",
+    "zip": "string"
   },
   "phone": [
     {
-      "number": string,
-      "type": string["home" | "work" | "mobile"]
+      "number": "string",
+      "type": "string"["home" | "work" | "mobile"]
     }
   ],
-  "email": string
+  "email": "string"
 }
 ```
 
