@@ -1,0 +1,1 @@
+export { ContactType } from "./contact";

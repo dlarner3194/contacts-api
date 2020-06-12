@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "build",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es6", "es7", "esnext"]
+  },
+  "include": ["./app.ts", "./routes/*"]
+}

@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: EC2 instance for the contacts api docker image
+
+Parameters:
+  AZ:
+    Type: String
+  Ec2Type:
+    Type: String
+    Default: "t2.micro"
+  SubnetId:
+    Type: String
+  Ec2SecurityGroup:
+    Type: String
+  DockerImageTag:
+    Type: String
+
+Resources:
+  ContactsApiEcC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: "ami-09d95fab7fff3776c"
+      KeyName: "your-key-pair"
+      AvailabilityZone: !Ref AZ
+      InstanceType: !Ref Ec2Type
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+          GroupSet:
+            - !Ref Ec2SecurityGroup
+          SubnetId: !Ref SubnetId
+      BlockDeviceMappings:
+        - DeviceName: "/dev/sdm"
+          Ebs:
+            VolumeType: "io1"
+            Iops: "200"
+            DeleteOnTermination: "false"
+            VolumeSize: "20"
+        - DeviceName: "/dev/sdk"
+          NoDevice: {}
