@@ -1,4 +1,4 @@
-# SingleStone Contact API
+# Contact API
 
 This is a Rest API is created in order to perform CRUD operations on the client collection.
 
